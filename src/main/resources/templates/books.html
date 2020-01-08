@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www..thymeleaf.org">
+
+<head>
+    <title>Spring 5 Demo</title>
+</head>
+
+<body>
+<h1>Book List</h1>
+<table>
+    <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Publisher Name</th>
+        <th>Publisher Address</th>
+    </tr>
+    <tr th:each="book: ${books}">
+        <td th:text="${book.isbn}">test ISBN</td>
+        <td th:text="${book.title}">test Title</td>
+        <td th:text="${book.publisher.name}">test Publisher Name</td>
+        <td th:text="${book.publisher.address}">test Publisher Address</td>
+    </tr>
+</table>
+</body>
+</html>
